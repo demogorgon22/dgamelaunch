@@ -1554,7 +1554,7 @@ changepw (int dowrite)
     }
 
   free(me->password);
-  if(crypt(buf,buf)
+  if(crypt(buf,buf))
   	me->password = strdup (crypt (buf, buf));
   else
      return 0;
